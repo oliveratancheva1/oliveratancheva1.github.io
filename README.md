@@ -1,2 +1,2 @@
-# oliveratancheva1.github.io
+# oliveratancheva.github.io
 My Portfolio
