@@ -1,9 +1,12 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 /* General styles */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
   background-color: #d0f0fd; /* Light sky blue */
-  color: #333;
+  color: #1e3a8a; /* Medium deep blue for text */
 }
 
 /* Header */
@@ -22,17 +25,24 @@ header nav ul {
 
 header nav ul li a {
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
+  color: #1e3a8a; /* Matches text color */
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #007acc; /* Slightly brighter on hover */
 }
 
 header h1 {
   margin: 10px 0 5px 0;
+  color: #0b2161; /* Slightly darker blue for emphasis */
 }
 
 header p {
   font-size: 18px;
   margin: 0;
+  color: #1e3a8a;
 }
 
 /* Sections */
@@ -54,6 +64,7 @@ section {
   padding: 20px;
   width: 250px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  color: #1e3a8a;
 }
 
 .project-card a {
@@ -61,6 +72,7 @@ section {
   margin-top: 10px;
   text-decoration: none;
   color: #007acc;
+  font-weight: 600;
 }
 
 /* Footer */
