@@ -5,7 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Olivera Tancheva | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Typing effect */
+    .typing {
+      border-right: 3px solid #1e3a8a;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 3s steps(20, end) forwards, blink 0.7s infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <nav>
@@ -14,39 +35,41 @@
         <li><a href="#projects">Projects</a></li>
       </ul>
     </nav>
-    <h1>Olivera Tancheva</h1>
-    <p>Software Developer | Passionate about building modern web apps</p>
+
+    <!-- Typing Name -->
+    <h1 class="typing">Olivera Tancheva</h1>
+
+    <p>Software Developer | .NET & TypeScript</p>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
     <p>
-      Hello! I’m Olivera, a dedicated software engineer experienced in .NET, TypeScript, 
-      and full-stack development. I enjoy creating clean, maintainable code and building projects that solve real problems.
+      Hello! I’m Olivera, a software engineer passionate about building modern web applications,
+      working with .NET, TypeScript, and full-stack technologies.
     </p>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
+
     <div class="project-grid">
       <div class="project-card">
         <h3>Library Management System</h3>
-        <p>ASP.NET Core project with CRUD operations and database integration.</p>
-        <a href="projects/project1.html" target="_blank">View Project</a>
+        <p>ASP.NET Core CRUD application with database integration.</p>
+        <a href="#">View Project</a>
       </div>
+
       <div class="project-card">
-        <h3>Simple E-commerce Site</h3>
-        <p>Front-end & back-end project using ASP.NET Core and JavaScript.</p>
-        <a href="projects/project2.html" target="_blank">View Project</a>
+        <h3>E-commerce Website</h3>
+        <p>Full-stack project using ASP.NET Core and JavaScript.</p>
+        <a href="#">View Project</a>
       </div>
-      <!-- Add more project cards as needed -->
     </div>
   </section>
 
   <footer>
-    <p>© 2026 Olivera Tancheva | <a href="mailto:your.email@example.com">Email me</a></p>
+    <p>© 2026 Olivera Tancheva</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
