@@ -1,12 +1,8 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-/* General styles */
 body {
   margin: 0;
-  font-family: 'Poppins', Arial, sans-serif;
-  background-color: #d0f0fd; /* Light sky blue */
-  color: #1e3a8a; /* Medium deep blue for text */
+  font-family: 'Poppins', sans-serif;
+  background-color: #d0f0fd; /* light sky blue */
+  color: #1e3a8a;
 }
 
 /* Header */
@@ -15,34 +11,33 @@ header {
   padding: 50px 20px;
 }
 
-header nav ul {
+nav ul {
   list-style: none;
-  padding: 0;
   display: flex;
   justify-content: center;
   gap: 20px;
+  padding: 0;
 }
 
-header nav ul li a {
+nav a {
   text-decoration: none;
-  color: #1e3a8a; /* Matches text color */
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-header nav ul li a:hover {
-  color: #007acc; /* Slightly brighter on hover */
-}
-
-header h1 {
-  margin: 10px 0 5px 0;
-  color: #0b2161; /* Slightly darker blue for emphasis */
-}
-
-header p {
-  font-size: 18px;
-  margin: 0;
   color: #1e3a8a;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #007acc;
+}
+
+/* Typing cursor */
+#typing-name::after {
+  content: "|";
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
 /* Sections */
@@ -51,38 +46,127 @@ section {
   text-align: center;
 }
 
+h1 {
+  font-size: 36px;
+  color: #0b2161;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Projects */
 .project-grid {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
+/* Profile Image */
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px; /* space between image and name */
+}
+
+.profile-image {
+  width: 300px;        /* much bigger */
+  height: 300px;       /* keep square for perfect circle */
+  border-radius: 50%;  /* circular shape */
+  object-fit: cover;   /* maintain proportions */
+  border: 5px solid #007acc; /* nice border matching theme */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* stronger shadow for pop */
+}
+card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  background: linear-gradient(145deg, #f0f0f0, #d9d9d9); /* slightly brighter on hover */
+}/* Projects - metallic style */
+/* Projects - light metallic style */
+/* Projects grid (flex wrap handles multiple cards) */
+.project-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Cards already have metallic style and hover */
 .project-card {
-  background: white;
-  border-radius: 10px;
+  background: linear-gradient(145deg, #f8f8f8, #e8e8e8); /* light metallic */
   padding: 20px;
-  width: 250px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  width: 260px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   color: #1e3a8a;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 60%);
+  transform: rotate(25deg);
+  transition: transform 0.5s;
+  pointer-events: none; /* allow clicks */
+}
+
+.project-card:hover::after {
+  transform: rotate(25deg) translateX(50%);
 }
 
 .project-card a {
   display: inline-block;
   margin-top: 10px;
   text-decoration: none;
-  color: #007acc;
+  color: #007acc; /* normal blue */
   font-weight: 600;
+  transition: color 0.2s;
+}
+
+.project-card a:hover {
+  color: #005fa3;
+}
+
+.project-card a:active {
+  color: #003f6b; /* dark blue on click */
+}
+
+#contact {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f0f4f8; /* very light blue-grey for contrast */
+  border-top: 1px solid #d0d0d0;
+}
+
+#contact a {
+  color: #007acc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#contact a:hover {
+  color: #005fa3; /* dark blue on hover */
+  text-decoration: underline;
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 20px;
   background: #007acc;
   color: white;
-}
-footer a {
-  color: white;
-  text-decoration: underline;
+  text-align: center;
+  padding: 20px;
 }
