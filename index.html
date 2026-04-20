@@ -4,43 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Olivera Tancheva | Portfolio</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* Typing effect */
-    .typing {
-      border-right: 3px solid #1e3a8a;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      animation: typing 3s steps(20, end) forwards, blink 0.7s infinite;
-    }
-
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
-  </style>
 </head>
 
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-      </ul>
-    </nav>
+  <nav>
+    <ul>
+      <nav>
+  <ul>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact Me</a></li> <!-- New link -->
+  </ul>
+</nav>
+    </ul>
+  </nav>
 
-    <!-- Typing Name -->
-    <h1 class="typing">Olivera Tancheva</h1>
+  <!-- Profile Image -->
+  <div class="profile-image-container">
+    <img src="images/profile.jpeg" alt="Olivera Tancheva" class="profile-image">
+  </div>
 
-    <p>Software Developer | .NET & TypeScript</p>
-  </header>
+  <!-- Typing Name -->
+  <h1 id="typing-name"></h1>
+
+  <p>Software Developer | .NET & TypeScript</p>
+</header>
 
   <section id="about">
     <h2>About Me</h2>
@@ -51,25 +45,97 @@
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
+  <h2>Projects</h2>
 
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Library Management System</h3>
-        <p>ASP.NET Core CRUD application with database integration.</p>
-        <a href="#">View Project</a>
-      </div>
-
-      <div class="project-card">
-        <h3>E-commerce Website</h3>
-        <p>Full-stack project using ASP.NET Core and JavaScript.</p>
-        <a href="#">View Project</a>
-      </div>
+  <div class="project-grid">
+    <!-- Existing Projects -->
+    <div class="project-card">
+      <h3>Library Management System</h3>
+      <p>ASP.NET Core CRUD application with database integration.</p>
+      <a href="projects/project1.html">View Project</a>
     </div>
-  </section>
 
+    <div class="project-card">
+      <h3>E-commerce Website</h3>
+      <p>Full-stack project using ASP.NET Core and JavaScript.</p>
+      <a href="projects/project2.html">View Project</a>
+    </div>
+
+    <!-- New Projects -->
+    <div class="project-card">
+      <h3>Personal Developer Assistant</h3>
+      <p>LLM-powered assistant that answers programming questions.</p>
+      <a href="projects/project3.html">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Text Summarizer</h3>
+      <p>Summarizes long articles or research papers with AI.</p>
+      <a href="projects/project4.html">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Sentiment Analysis Tool</h3>
+      <p>Analyzes reviews and gives contextual sentiment explanations.</p>
+      <a href="projects/project5.html">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Email Draft Generator</h3>
+      <p>Generates professional emails based on short instructions.</p>
+      <a href="projects/project6.html">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Meeting Notes Summarizer</h3>
+      <p>Summarizes raw meeting transcripts into action items.</p>
+      <a href="projects/project7.html">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Code Refactoring Bot</h3>
+      <p>Suggests improvements and docstrings for your code automatically.</p>
+      <a href="projects/project8.html">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Document QA System</h3>
+      <p>Answers questions from uploaded PDFs or documents.</p>
+      <a href="projects/project9.html">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Story Generator</h3>
+      <p>Creates stories or interactive fiction in different genres.</p>
+      <a href="projects/project10.html">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Lyrics / Poem Writer</h3>
+      <p>Generates lyrics or poems based on topic and mood.</p>
+      <a href="projects/project11.html">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>AI Dungeon Master</h3>
+      <p>Dynamic tabletop RPG scenario generator powered by AI.</p>
+      <a href="projects/project12.html">View Project</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>
+    I’d love to hear from you! You can reach me via email or connect with me on LinkedIn.
+  </p>
+  <p>Email: <a href="mailto:olivera@example.com">olivera@example.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/olivera-tancheva" target="_blank">linkedin.com/in/olivera-tancheva</a></p>
+</section>
   <footer>
     <p>© 2026 Olivera Tancheva</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
